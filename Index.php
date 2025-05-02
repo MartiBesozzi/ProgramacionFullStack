@@ -13,31 +13,31 @@
     function Validar_contraseña ($contraseña) {
         $contador = 4;
         if (strlen($contraseña) < 8) {
-            echo("La longitud minima de caracteres es de 8 ");
+            echo("La longitud minima de caracteres es de 8 <br>");
             $contador = $contador - 1;
         }
 
-        elseif(!preg_match('/[0-9]/', $contraseña)){
-            echo("La contreseña debe contener un número ");
+        if(!preg_match('/[0-9]/', $contraseña)){
+            echo("La contraseña debe contener un número <br>");
             $contador = $contador - 1;
         }
 
-        elseif(!preg_match('/[\W_]/', $contraseña)) {
-            echo("La contraseña debe contener una mayuscula ");
+        if(!preg_match('/[\W_]/', $contraseña)) {
+            echo("La contraseña debe contener caracteres especiales <br>");
             $contador = $contador - 1;
         }
 
-        elseif(!preg_match('/[^A-Z a-z 0-9]/', $contraseña)) {
-            echo("La contraseña debe contener caracteres especiales ");
+        if(!preg_match('/[A-Z]/', $contraseña)) {
+            echo("La contraseña debe contener una mayuscula <br>");
             $contador = $contador - 1;
         }
 
-        else{
-            echo("La contraseña valida es: ". $contraseña);
+        if($contador == 4){
+            echo("La contraseña válida es: " . $contraseña . "<br>");
         }
+        return $contador;
     }
-    return $contador;
-    
+  
     function Fuerza_contraseña($contador) {
         if($contador == 4){
             echo("El nivel de la contraseña es fuerte");
@@ -55,7 +55,7 @@
             echo("La contraseña no es suficientemente fuerte");
         }
     }
-    Validar_contraseña($contraseña);
+    $contador = Validar_contraseña($contraseña);
     Fuerza_contraseña($contador);
 ?>
 </body>

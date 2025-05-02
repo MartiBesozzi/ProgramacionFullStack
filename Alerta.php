@@ -14,29 +14,34 @@
 
     function Alerta_metereologica($temperatura, $humedad, $velocidad_viento, $precipitacion) {
         if($temperatura > 40) {
-            echo("Alerta ola de calor ");
+            echo("Alerta ola de calor <br>");
+            
         }
+        echo("<br>");
 
-        elseif($humedad > 60){
-            echo("La humedad es bastante alta ");
+        if($humedad > 60){
+            echo("Alerta la humedad es bastante alta <br>");
         }
+        echo("<br>");
 
-        elseif($velocidad_viento > 30){
-            echo("El viento es bastante fuerte ");
+        if($velocidad_viento > 30){
+            echo("Alerta el viento es bastante fuerte <br>");
 
         }
+        echo("<br>");
 
-        elseif($precipitacion > 112){
-            echo("Las precipitaciones son muy altas ");
+        if($precipitacion > 112){
+            echo("Alerta las medidas de precipitaciones son muy altas <br>");
         }
-
-        echo("La temperatura es: ". $temperatura. "°"); <br>
-        echo("La humedad es: ". $humedad. "%");
-        echo("La velocidad del viento es:". $velocidad_viento. "km/h");
-        echo("Las precipitaciones son:". $precipitacion. "ml");
+        echo("<br>");
+        
+        echo("La temperatura es: ". $temperatura. "°<br>");
+        echo("La humedad es: ".$humedad. "%<br>");
+        echo("La velocidad del viento es: ". $velocidad_viento. "km/h<br>");
+        echo("Las precipitaciones son: ". $precipitacion. "ml<br>");
     }
     Alerta_metereologica($temperatura, $humedad, $velocidad_viento, $precipitacion);
-
     ?>
+
 </body>
 </html>
