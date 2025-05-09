@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imprimir numeros del 1 al 100</title>
+    <title>Bucle For</title>
 </head>
 <body>
     <?php

@@ -20,7 +20,7 @@ foreach ($productos as $producto => $precio) {
     echo("Producto: $producto <br> Precio: $precio <br>");
 }
 
-
+ 
 ?>
 </body>
 </html>
