@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copa uruguaya</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <div>
+        <header>
+            <h1>Uruguayo 1° División - Tabla apertura</h1>
+        </header>
+    </div>
 <?php
    $equipos = [
-    ["nombre" => "PeÃ±arol", "escudo" => "imagenes/penarol.png", "puntos" => 0, "partidos_ganados" => 6, "partidos_empatados" => 2, "partidos_perdidos" => 1, "goles_a_favor" => 17, "goles_en_contra" => 8, "diferencia" => 0],
+    ["nombre" => "Peñarol", "escudo" => "imagenes/penarol.png", "puntos" => 0, "partidos_ganados" => 6, "partidos_empatados" => 2, "partidos_perdidos" => 1, "goles_a_favor" => 17, "goles_en_contra" => 8, "diferencia" => 0],
  
     ["nombre" => "Nacional", "escudo" => "imagenes/nacional.png", "puntos" => 0, "partidos_ganados" => 5, "partidos_empatados" => 3, "partidos_perdidos" => 1, "goles_a_favor" => 15, "goles_en_contra" => 9, "diferencia" => 0],
  
@@ -62,18 +68,21 @@ unset($equipo);
         </tr>
  
         <?php foreach($equipos as $equipo): ?>
-        <tr>
+            <?php
+                $color_fondo = ($equipo['puntos'] % 2 == 0) ? '#c4c4c4' : 'white';
+            ?>
+        <tr style="background-color: <?= $color_fondo ?>;">
             <td>
-            <?= $equipo["nombre"] ?>
-            <img src="<?= $equipo["escudo"] ?>" alt="Escudo <?= $equipo["nombre"] ?>" width="30">
+            <img src="<?= $equipo['escudo'] ?>" alt="Escudo <?= $equipo['nombre'] ?>" width="30">
+            <?= $equipo['nombre'] ?>
             </td>
-            <td><?= $equipo["puntos"] ?></td>
-            <td><?= $equipo["partidos_ganados"] ?></td>
-            <td><?= $equipo["partidos_empatados"] ?></td>
-            <td><?= $equipo["partidos_perdidos"] ?></td>
-            <td><?= $equipo["goles_a_favor"] ?></td>
-            <td><?= $equipo["goles_en_contra"] ?></td>
-            <td><?= $equipo["diferencia"] ?></td>
+            <td><?= $equipo['puntos'] ?></td>
+            <td><?= $equipo['partidos_ganados'] ?></td>
+            <td><?= $equipo['partidos_empatados'] ?></td>
+            <td><?= $equipo['partidos_perdidos'] ?></td>
+            <td><?= $equipo['goles_a_favor'] ?></td>
+            <td><?= $equipo['goles_en_contra'] ?></td>
+            <td><?= $equipo['diferencia'] ?></td>
         </tr>
         <?php endforeach; ?>
     </table>
