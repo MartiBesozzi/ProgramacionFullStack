@@ -8,38 +8,44 @@
 <body>
 <?php
     $equipos = [
-    ["nombre" => "Peñarol", "escudo" => "penarol.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Peñarol", "escudo" => "penarol.png", "puntos" => 0, "partidos_ganados" => 6, "partidos_empatados" => 2, "partidos_perdidos" => 1, "goles_a_favor" => 17, "goles_en_contra" => 8, "diferencia" => 0],
 
-    ["nombre" => "Nacional", "escudo" => "nacional.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Nacional", "escudo" => "nacional.png", "puntos" => 0, "partidos_ganados" => 5, "partidos_empatados" => 3, "partidos_perdidos" => 1, "goles_a_favor" => 15, "goles_en_contra" => 9, "diferencia" => 0],
 
-    ["nombre" => "Defensor Sporting", "escudo" => "defensorsporting.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Defensor Sporting", "escudo" => "defensorsporting.png", "puntos" => 0, "partidos_ganados" => 4, "partidos_empatados" => 2, "partidos_perdidos" => 3, "goles_a_favor" => 12, "goles_en_contra" => 11, "diferencia" => 0],
 
-    ["nombre" => "Montevideo City Torque", "escudo" => "montevideo.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Montevideo City Torque", "escudo" => "montevideo.png", "puntos" => 0, "partidos_ganados" => 3, "partidos_empatados" => 3, "partidos_perdidos" => 3, "goles_a_favor" => 11, "goles_en_contra" => 12, "diferencia" => 0],
 
-    ["nombre" => "Boston River", "escudo" => "bostonriver.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Boston River", "escudo" => "bostonriver.png", "puntos" => 0, "partidos_ganados" => 4, "partidos_empatados" => 1, "partidos_perdidos" => 4, "goles_a_favor" => 13, "goles_en_contra" => 13, "diferencia" => 0],
 
-    ["nombre" => "Cerro", "escudo" => "cerro.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Cerro", "escudo" => "cerro.png", "puntos" => 0, "partidos_ganados" => 2, "partidos_empatados" => 4, "partidos_perdidos" => 3, "goles_a_favor" => 10, "goles_en_contra" => 12, "diferencia" => 0],
 
-    ["nombre" => "Cerro Largo", "escudo" => "cerrolargo.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Cerro Largo", "escudo" => "cerrolargo.png", "puntos" => 0, "partidos_ganados" => 2, "partidos_empatados" => 3, "partidos_perdidos" => 4, "goles_a_favor" => 9, "goles_en_contra" => 14, "diferencia" => 0],
 
-    ["nombre" => "Danubio", "escudo" => "danubio.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Danubio", "escudo" => "danubio.png", "puntos" => 0, "partidos_ganados" => 3, "partidos_empatados" => 2, "partidos_perdidos" => 4, "goles_a_favor" => 10, "goles_en_contra" => 13, "diferencia" => 0],
 
-    ["nombre" => "Plaza Colonia", "escudo" => "plazacolonia.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Plaza Colonia", "escudo" => "plazacolonia.png", "puntos" => 0, "partidos_ganados" => 1, "partidos_empatados" => 4, "partidos_perdidos" => 4, "goles_a_favor" => 7, "goles_en_contra" => 12, "diferencia" => 0],
 
-    ["nombre" => "Progreso", "escudo" => "progreso.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Progreso", "escudo" => "progreso.png", "puntos" => 0, "partidos_ganados" => 2, "partidos_empatados" => 3, "partidos_perdidos" => 4, "goles_a_favor" => 8, "goles_en_contra" => 13, "diferencia" => 0],
 
-    ["nombre" => "Juventud", "escudo" => "juventud.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Juventud", "escudo" => "juventud.png", "puntos" => 0, "partidos_ganados" => 3, "partidos_empatados" => 1, "partidos_perdidos" => 5, "goles_a_favor" => 10, "goles_en_contra" => 16, "diferencia" => 0],
 
-    ["nombre" => "Racing", "escudo" => "racing.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Racing", "escudo" => "racing.png", "puntos" => 0, "partidos_ganados" => 2, "partidos_empatados" => 2, "partidos_perdidos" => 5, "goles_a_favor" => 9, "goles_en_contra" => 15, "diferencia" => 0],
 
-    ["nombre" => "Liverpool", "escudo" => "Liverpool.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "Liverpool", "escudo" => "Liverpool.png", "puntos" => 0, "partidos_ganados" => 5, "partidos_empatados" => 2, "partidos_perdidos" => 2, "goles_a_favor" => 16, "goles_en_contra" => 10, "diferencia" => 0],
 
-    ["nombre" => "River Plate", "escudo" => "riverplate.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
+    ["nombre" => "River Plate", "escudo" => "riverplate.png", "puntos" => 0, "partidos_ganados" => 3, "partidos_empatados" => 3, "partidos_perdidos" => 3, "goles_a_favor" => 11, "goles_en_contra" => 11, "diferencia" => 0],
+    
+    ["nombre" => "Miramar Misiones", "escudo" => "miramarmisiones.png", "puntos" => 0, "partidos_ganados" => 1, "partidos_empatados" => 3, "partidos_perdidos" => 5, "goles_a_favor" => 6, "goles_en_contra" => 14, "diferencia" => 0],
 
-    ["nombre" => "Miramar Misiones", "escudo" => "miramarmisiones.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0],
-
-    ["nombre" => "Wanderers", "escudo" => "wanderers.png", "puntos" => 0, "partidos_ganados" => 0, "partidos_empatados" => 0, "partidos_perdidos" => 0, "goles_a_favor" => 0, "goles_en_contra" => 0, "diferencia" => 0]   
+    ["nombre" => "Wanderers", "escudo" => "wanderers.png", "puntos" => 0, "partidos_ganados" => 2, "partidos_empatados" => 3, "partidos_perdidos" => 4, "goles_a_favor" => 9, "goles_en_contra" => 13, "diferencia" => 0]
 ];
+
+foreach ($equipos as &$equipo) {
+    $equipo["puntos"] = ($equipo["partidos_ganados"] * 3) + ($equipo["partidos_empatados"]);
+    $equipo["diferencia"] = $equipo["goles_a_favor"] - $equipo["goles_en_contra"];
+}
+
 ?>
 
 <table border="1">
