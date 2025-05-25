@@ -45,6 +45,7 @@ foreach ($equipos as &$equipo) {
     $equipo["puntos"] = ($equipo["partidos_ganados"] * 3) + ($equipo["partidos_empatados"]);
     $equipo["diferencia"] = $equipo["goles_a_favor"] - $equipo["goles_en_contra"];
 }
+unset($equipo);
 
 ?>
 
