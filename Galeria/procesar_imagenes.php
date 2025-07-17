@@ -44,7 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Mover el archivo a la carpeta de destino
-        $rutaDestino = $carpetaDestino . basename($nombreArchivo); 
+        $rutaDestino = $carpetaDestino . basename($nombreArchivo);
+        echo "Todo funciona a la perfeccion :)";
+
         if (move_uploaded_file($rutaTemporal, $rutaDestino)) {
             $datos = [                          //guarda info. en un ARRAY
                 'nombre' => $nombre,

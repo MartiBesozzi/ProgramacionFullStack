@@ -1,3 +1,4 @@
+<?php $imagenes = file_exists('imagenes.json') ? json_decode(file_get_contents('imagenes.json'), true) : []; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,42 +10,35 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <div id="carouselExampleCaptions" class="carousel slide">
+      
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="Imagenes/peña.jpg" class="d-block w-100" alt="floppy" width="100" height="540">
+  <?php foreach ($imagenes as $index => $img): ?>
+    <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+      <img src="<?= htmlspecialchars($img['archivo']) ?>" class="d-block w-100" alt="imagen" width="100" height="540">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5><?= htmlspecialchars($img['nombre']) ?></h5>
+        <p><?= htmlspecialchars($img['descripcion']) ?></p>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="Imagenes/cristobal.jpg" class="d-block w-100" alt="floppy" width="100" height="540">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Imagenes/cocodrilo.jpg" class="d-block w-100" alt="floppy" width="100" height="540">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
+  <?php endforeach; ?>
+</div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
+
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+
 </div>
 </body>
 </html>
